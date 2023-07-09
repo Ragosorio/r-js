@@ -111,6 +111,23 @@ const height = box.height();
 const offset = box.offset();
 const position = box.position();
 const backgroundColor = box.getStyle('backgroundColor');
+
+// Automated Functions
+const array = [1, 2, 3, 4, 5];
+console.log(r().shuffleArray(array)) // Output: [3, 2, 4, 5, 1]
+
+const str = "hello";
+const capitalizedStr = r().capitalizeString(str);
+console.log(capitalizedStr); // Output: "Hello"
+
+const num = 5;
+const factorial = r().calculateFactorial(num);
+console.log(factorial); // Output: 120
+
+r().delay(() => {
+  console.log("This function will execute after a delay of 2000 ms");
+}, 2000);
+});
 ```
 
 GitHub Repository: [https://github.com/Ragosorio/r-js]
