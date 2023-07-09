@@ -7,6 +7,7 @@ Key Features:
 
 1. DOMContentLoaded Event Handling:
    - "r()" function allows you to execute a callback function when the DOM content has finished loading.
+   - Example usage: `r(() => {...})`
 
 2. Query Selector:
    - Select elements from the DOM using CSS selectors.
@@ -61,8 +62,57 @@ Key Features:
 10. Miscellaneous:
     - `getStyle(property)` retrieves the computed style property of the first selected element.
 
-Please note that "r(js)" is an open-source project available on GitHub. We value your feedback, suggestions, and contributions to enhance and improve the library. Feel free to explore the documentation, try out the functions, and join our growing community of developers. Happy coding with "r(js)"!
+Please note that "r(js)" is an open-source project available on GitHub. We value your feedback, suggestions, and contributions to enhance and improve the library. Feel free to explore the documentation, try out the functions, and join our growing community of developers.
 
-GitHub Repository: https://github.com/Ragosorio/r-js
+Example Usage:
+
+```javascript
+// Logging Messages
+r().log("Hhhhola");
+r().err("Hola");
+
+// CSS Manipulation and Event Handling
+r(() => {
+  console.log("Hola");
+
+  r("button")
+    .css("background", "#09f")
+    .css("border", "#fff")
+    .css({
+      padding: "15px",
+      borderRadius: "4px",
+    })
+    .on("click", () => {
+      r("#mensaje").fadeIn();
+    })
+    .removeClass(`hh`)
+    .html("<p>Gogo<p>");
+
+  // ...
+
+});
+
+// Attribute Manipulation and Property Access
+r("p").attr("paco","Juzman");
+
+const button = r('.btn');
+button.prop('textContent', 'Haz clic aquí'); // Set the button's text content to 'Haz clic aquí'
+button.prop('style.backgroundColor', 'red'); // Set the button's background color to red
+
+// Animation, Dimensions, and Position
+const box = r('.box');
+box.fadeIn();
+box.fadeOut();
+box.show();
+box.hide();
+box.toggle();
+const width = box.width();
+const height = box.height();
+const offset = box.offset();
+const position = box.position();
+const backgroundColor = box.getStyle('backgroundColor');
+```
+
+GitHub Repository: [https://github.com/Ragosorio/r-js]
 
 We look forward to your valuable opinions and suggestions to make "r(js)" even better. Together, let's simplify JavaScript development!
